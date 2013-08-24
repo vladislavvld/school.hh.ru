@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="аап"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fioResume"
+        android:layout_alignLeft="@+id/fioResume"
+        android:ems="10"
+        android:hint="Должность"
+        android:inputType="textCapSentences" />
+
+    <TextView
+        android:id="@+id/dateBirthResumeLable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/fioResume"
+        android:layout_below="@+id/fioResume"
+        android:layout_marginTop="18dp"
+        android:text="Дата рождения" />
+
+    <DatePicker
+        android:id="@+id/dateBirthResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateBirthResumeLable"
+        android:layout_below="@+id/dateBirthResumeLable" />
+
+    <EditText
+        android:id="@+id/fioResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button1"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="ФИО"
+        android:inputType="textPersonName|textCapWords" />
+
+    <Spinner
+        android:id="@+id/genderResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dateBirthResume"
+        android:layout_below="@+id/dateBirthResume"
+        android:contentDescription="@string/hello_world" 
+        android:entries="@array/gender"
+        />
+
+    <EditText
+        android:id="@+id/moneyResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/genderResume"
+        android:layout_below="@+id/genderResume"
+        android:ems="10"
+        android:hint="Зарплата"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/numberPhoneResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/moneyResume"
+        android:layout_below="@+id/moneyResume"
+        android:ems="10"
+        android:hint="Номер телефона"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/emailResume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/numberPhoneResume"
+        android:layout_below="@+id/numberPhoneResume"
+        android:ems="10"
+        android:hint="Электронная почта"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emailResume"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="44dp"
+        android:text="Отправить резюме" />
+    
+</RelativeLayout>
